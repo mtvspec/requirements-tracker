@@ -1,14 +1,9 @@
-import { StakeholderActionTypes } from "../stakeholder.actions";
-
-interface IStakeholder {
-  id: number
-  name: string
-  description: string
-}
+import { StakeholderActionTypes } from "../stakeholder.actions"
+import { Stakeholder } from "../stakeholder.model"
 
 interface IStakeholdersState {
-  currentStakeholder: IStakeholder,
-  stakeholders: IStakeholder[]
+  currentStakeholder: Stakeholder,
+  stakeholders: Stakeholder[]
 }
 
 const initialState: IStakeholdersState = {

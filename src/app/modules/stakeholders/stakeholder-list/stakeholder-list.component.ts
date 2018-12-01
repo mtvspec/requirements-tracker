@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { Store, select } from '@ngrx/store'
 import * as StakeholderActions from './../stakeholder.actions'
+import { Stakeholder } from '../stakeholder.model'
 
 @Component({
   selector: 'app-stakeholder-list',
@@ -8,9 +9,7 @@ import * as StakeholderActions from './../stakeholder.actions'
   styleUrls: ['./stakeholder-list.component.scss']
 })
 export class StakeholderListComponent implements OnInit {
-  selectedStakeholder = {
-    name: ''
-  }
+  selectedStakeholder: Stakeholder
   stakeholders = []
   constructor(private store: Store<any>) { }
 

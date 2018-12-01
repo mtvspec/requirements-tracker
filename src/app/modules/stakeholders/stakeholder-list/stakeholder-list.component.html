@@ -1,14 +1,14 @@
 <p>
   stakeholder-list works!
 </p>
-<button (click)="onStakeholderSelect({ name: 'Jane Doe' })">Jane Doe</button>
 
 <div *ngIf="selectedStakeholder">
-  {{ selectedStakeholder.name }}
+  {{ selectedStakeholder.person.firstName }}
 </div>
 
 <button (click)="updateList()">Update</button>
 
 <ol>
-  <li *ngFor="let stakeholder of stakeholders">{{stakeholder.person.firstName}}</li>
+  <li *ngFor="let stakeholder of stakeholders"
+    (click)="onStakeholderSelect(stakeholder)">{{stakeholder.person.firstName}}</li>
 </ol>
